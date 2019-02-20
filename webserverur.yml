@@ -14,12 +14,12 @@
     when: ansible_os_family =="Debian" 
 
 
-- name: install webserver on redhat(httpd)
+- name: install webserver on RedHat(httpd)
   yum:
    name: httpd
    state: present
   when: ansible_os_family =="RedHat"
-- name: start the webserver on redhat(httpd)
+- name: start the webserver on RedHat(httpd)
   service:
    name: httpd
    state: started 

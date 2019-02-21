@@ -4,6 +4,7 @@
   tasks: 
   - name: install java7 on ubuntu
     apt:
-      name: openjdk-7-jre
+      name: "{{myjavaonubuntu}}"
+
       state: present
     when: ansible_os_family =="Debian"

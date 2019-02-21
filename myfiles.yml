@@ -1,5 +1,5 @@
 ---
-  - name: want to create file on all nodes
+  - name:  i want to create file on all nodes
     file:
       path: /home/naveena/naveena.txt
       state: touch

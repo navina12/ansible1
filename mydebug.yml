@@ -8,4 +8,15 @@
   - name: display the result
     debug:
       msg:"{{myresult}}"
-      
+
+  - name: install git if no errors in above task
+    apt:
+      name: git
+      state: present
+    when: myresult.stderr ==""
+  - name: install tree if  errors in above task
+    apt:
+      name: git
+      state: present
+    when: myresult.stderr !=""
+

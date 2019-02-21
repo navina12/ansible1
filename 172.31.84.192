@@ -1,1 +1,9 @@
-myjavaonubuntu : openjdk-7-jre
+---
+- hosts: webservers
+  become: yes
+  tasks: 
+  - name: install java7 on ubuntu
+    apt:
+      name: openjdk-7-jre
+      state: present
+    when: ansible_os_family =="Debian"
